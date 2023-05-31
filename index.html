@@ -12,23 +12,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="./d-19.js"></script>
+
     <script type="text/javascript">
 
         function validacia() {
             var input1 = document.getElementById("input1");
             var input2 = document.getElementById("input2");
-            consol.log(gkgv);
+
 
             if (input1.length == 0 || input1.value == "") {
-                document.getElementById("forgotEmail").style.display = "flex!important";
-
+                document.getElementById("forgotEmail").style.display = "block !important";
+                return false;
 
             } else if (input2.value == "" || input2.length == 0) {
                 document.getElementById("forgotPassword").style.display = "block !important";
+                return false;
 
             } else {
                 document.getElementById("data").style.display = "block !important";
+
             }
         }
 
@@ -97,10 +99,12 @@
                     <div class="button-div d-flex justify-content-center" style="margin-top: 27px;">
                         <input type="submit" class="btn1" id="btn-1" value="Log In" onclick="validacia()">
                     </div>
+                    <div class="span-div d-none">
+                        <span style="color: #1A7FC1;" id="data">Registration was successful</span>
+                    </div>
                 </form>
-                <div class="span-div d-none">
-                    <span style="color: #1A7FC1;" id="data">Registration was successful</span>
-                </div>
+
+
 
                 <div class="lines d-flex justify-content-center align-items-center">
                     <svg width="166" height="2" viewBox="0 0 166 2" fill="none" xmlns="http://www.w3.org/2000/svg">
