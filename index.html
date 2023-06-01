@@ -18,26 +18,26 @@
         function validacia() {
             var input1 = document.getElementById("input1");
             var input2 = document.getElementById("input2");
-
-
+            document.getElementById("forgotPassword").style.display = "flex !important";
             if (input1.length == 0 || input1.value == "") {
+
                 document.getElementById("forgotEmail").style.display = "block !important";
                 return false;
 
             } else if (input2.value == "" || input2.length == 0) {
+                window.alert("შეიყვანეთ პაროლი");
                 document.getElementById("forgotPassword").style.display = "block !important";
                 return false;
-
             } else {
+                window.alert("რეგისტრაცია დასრულებულია");
                 document.getElementById("data").style.display = "block !important";
 
             }
         }
-
     </script>
 </head>
 
-<body style="background-color: #1E1E1E; position: relative;">
+<body style="background-color:#1E1E1E; position: relative;">
     <div class="img-1" style="margin-right: auto; ">
         <img src="./images/Triangle with Circle.png">
     </div>
@@ -68,13 +68,15 @@
                                 <line x1="1" y1="37.0278" x2="1" y2="0.972244" stroke="white" stroke-width="2" />
                             </svg>
                         </div>
-                        <input type="email" class="inp1" id="input1" placeholder="example@gmail.com">
+                        <input type="text" class="inp1" id="input1" placeholder="example@gmail.com">
                     </div>
-                    <div class="forget justify-content-center d-none" id="forgotEmail" style="padding-left: 390px;">
-                        <p id="txt1" style="color: #1A7FC1;"> forgot Email</p>
+                    <div class="forget justify-content-center" id="forgotEmail" style="padding-left: 390px; ">
+                        <p id="text1" style="color: #1A7FC1;"> </p>
                     </div>
+                    /* ----------------------- input password -----------------*/
+
                     <div class="label d-flex justify-content-center" style="padding-right: 410px; margin-top: 27px;">
-                        <label for="password" style="justify-content: center; display: flex;">Password</label>
+                        <label for="password" style="justify-content: center; display: none;">Password</label>
                     </div>
                     <div class="input-div position-relative d-flex justify-content-center align-items-center">
                         <div class="div-svg d-flex  position-absolute" style="gap: 14px;">
@@ -93,18 +95,18 @@
                         <input type="password" class="inp2" id="input2" placeholder="*********"
                             style="color: rgba(255, 255, 255, 0.51);">
                     </div>
-                    <div class="forget d-none justify-content-center" id="forgotPassword" style="padding-left: 360px;">
-                        <p>Forget password</p>
+                    <div class="forget justify-content-center" id="forgotPassword"
+                        style="padding-left: 360px; display: none;">
+                        <p style="color:#1A7FC1; "> Forgot password? </p>
                     </div>
+                    /*--------------------- submit --------------------------*/
                     <div class="button-div d-flex justify-content-center" style="margin-top: 27px;">
-                        <input type="submit" class="btn1" id="btn-1" value="Log In" onclick="validacia()">
+                        <input type="submit" class="btn1" id="btn-1" value="Log In">
                     </div>
-                    <div class="span-div d-none">
-                        <span style="color: #1A7FC1;" id="data">Registration was successful</span>
+                    <div class="span-div d-flex justify-content-center d-none" style="padding-left: 250px;">
+                        <span style="color: #1A7FC1;" id=" data">Registration was successful</span>
                     </div>
                 </form>
-
-
 
                 <div class="lines d-flex justify-content-center align-items-center">
                     <svg width="166" height="2" viewBox="0 0 166 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +119,6 @@
                         <path d="M1 1L165 1" stroke="white" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </div>
-
-
                 <div class="img-3 d-flex flex-row justify-content-center" style="gap: 27px;">
                     <div class="img-3-1">
                         <img src="./images/Google.png">
@@ -137,7 +137,6 @@
             </div>
         </div>
     </div>
-
     <div class="img-33" style="margin-right: auto; ">
         <img src="./images/Double Square-1.png">
     </div>
