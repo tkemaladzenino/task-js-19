@@ -19,10 +19,9 @@
             var input1 = document.getElementById("input1");
             var input2 = document.getElementById("input2");
 
-
             if (input1.length == 0 || input1.value == "") {
-                window.alert("შეიყვანეთ ელ ფოსტა");
-                document.getElementById("forgotEmail").style.display = "flex !important";
+
+                document.getElementById("forgotEmail").style.setProperty('display', 'flex', 'important');
                 return false;
 
             } else if (input2.value == "" || input2.length == 0) {
@@ -35,6 +34,7 @@
                 return false;
             }
         }
+
     </script>
 </head>
 
@@ -102,9 +102,9 @@
                     </div>
                     /*--------------------- submit --------------------------*/
                     <div class="button-div d-flex justify-content-center" style="margin-top: 27px;">
-                        <input type="submit" class="btn1" id="btn-1" value="Log In">
+                        <input type="submit" class="btn1" id="btn" value="Log In">
                     </div>
-                    <div class="span-div d-flex justify-content-center d-none" style="padding-left: 250px;">
+                    <div class="span-div justify-content-center d-none" style="padding-left: 250px;">
                         <span style="color: #1A7FC1;" id=" data">Registration was successful</span>
                     </div>
                 </form>
