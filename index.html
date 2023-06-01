@@ -21,18 +21,18 @@
 
 
             if (input1.length == 0 || input1.value == "") {
-
-                document.getElementById("forgotEmail").style.display = "block !important";
+                window.alert("შეიყვანეთ ელ ფოსტა");
+                document.getElementById("forgotEmail").style.display = "flex !important";
                 return false;
 
             } else if (input2.value == "" || input2.length == 0) {
                 window.alert("შეიყვანეთ პაროლი");
-                document.getElementById("forgotPassword").style.display = "block !important";
+                document.getElementById("forgotPassword").style.display = "flex !important";
                 return false;
             } else {
                 window.alert("რეგისტრაცია დასრულებულია");
-                document.getElementById("data").style.display = "block !important";
-
+                document.getElementById("data").style.display = "flex !important";
+                return false;
             }
         }
     </script>
@@ -71,8 +71,8 @@
                         </div>
                         <input type="text" class="inp1" id="input1" placeholder="example@gmail.com">
                     </div>
-                    <div class="forget justify-content-center" id="forgotEmail" style="padding-left: 390px; ">
-                        <p id="text1" style="color: #1A7FC1;"> </p>
+                    <div class="forget justify-content-center d-none" id="forgotEmail" style="padding-left: 390px; ">
+                        <p id="text1" style="color: #1A7FC1;"> forgot Email?</p>
                     </div>
                     /* ----------------------- input password -----------------*/
 
