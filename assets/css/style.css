@@ -105,6 +105,7 @@ label {
     line-height: 38px;
     color: #FFFFFF;
     outline: none;
+    cursor: pointer;
 }
 
 .or {
